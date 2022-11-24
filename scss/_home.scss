@@ -1,0 +1,98 @@
+@import "./global";
+@import "./variables";
+@import "./mixins";
+
+body {
+  #section2 {
+    width: 100vw;
+    background-color: $secondary-color;
+    padding: 4% 0;
+    header {
+      .image {
+        @include flexBox(space-evenly);
+      }
+      .line {
+        width: 1000px;
+        height: 1px;
+        background-color: #f3d1bf;
+        margin: auto;
+        margin-top: 40px;
+      }
+    }
+    .section {
+      @include flexBox();
+      margin-top: 60px;
+      column-gap: 90px;
+      width: 100%;
+      .img {
+      @include flexBox();
+        width: 50%;
+        img {
+            width: 566px;
+          height: 585px;
+        }
+      }
+      .about {
+      @include flexBox();
+        display: block;
+        width: 50%;
+        h5 {
+          color: #ef6d58;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          letter-spacing: 3px;
+        }
+        h2 {
+          color: $text-color;
+          font-weight: 800;
+          font-size: 56px;
+          line-height: 64px;
+          letter-spacing: -1px;
+          margin-top: 15px;
+          width: 417px;
+        }
+        .paraghead {
+          color: #391400;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 32px;
+          margin: 20px 0;
+        }
+        .parag {
+          color: #391400a3;
+          width: 400px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+        }
+        .about-button {
+          width: 138px;
+          height: 48px;
+          background: #fff;
+          box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+          border-radius: 6px;
+          border: 0;
+          cursor: pointer;
+          font-weight: 900;
+          line-height: 14px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:  768px) {
+    body {
+        #section2 {
+            header {
+                .line {
+                    width: 329px;
+                }
+            }
+            .section  {
+                flex-direction: column;
+            }
+        }
+    }
+}
